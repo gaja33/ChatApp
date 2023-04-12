@@ -1,0 +1,66 @@
+<div class="container p-0" style="height: 100%;background-color: #fff;">
+    <mat-toolbar class="shadow-add fixed-top" fxLayout="row" style="background-color: #fff">
+      <div fxFlex="50">
+        <div>
+          <mat-icon style="vertical-align: middle">arrow_back</mat-icon>
+          &nbsp;&nbsp;
+          <span style="font-size: 16px"><b>Chat</b></span
+          >&nbsp;&nbsp;<span class="fa fa-commenting-o"></span>
+        </div>
+      </div>
+      <div fxFlex="50" fxLayoutAlign="end">
+        <mat-icon>person_add</mat-icon>&nbsp;&nbsp;
+        <mat-icon>search</mat-icon>
+      </div>
+    </mat-toolbar>
+  <div>
+    <mat-card
+      class="example-card"
+      style="background: #fafafa; border-bottom: 1px solid #e0e0e0"
+      *ngFor="let user of userList"
+      (click)="openChat(user)"
+    >
+      <mat-card-header>
+        <div
+          mat-card-avatar
+          class="example-header-image"
+          [ngStyle]="{
+            'background-image': getURL(user.avatar)
+          }"
+        ></div>
+        <mat-card-title fxLayout="row" style="font-size: 14px;">
+          <div fxFlex="70">
+            <b>{{ user.displayName }}</b>
+          </div>
+          <div fxFlex="30" fxLayoutAlign="end">3m ago</div>
+        </mat-card-title>
+        <mat-card-subtitle fxLayout="row"
+          ><div fxFlex="70" style="color: rgb(159, 159, 159)">Shiba Inu</div>
+          <div fxFlex="30" fxLayoutAlign="end">
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              style="color: white"
+            >
+              99
+            </span>
+          </div></mat-card-subtitle
+        >
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>
+  <!-- <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Chat
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let user of userList">
+                <button (click)="openChat(user)" class="borderNone"> <span><img src="{{user.avatar}}"
+                            class="height12 padding12"></span>{{user.displayName}}
+                </button>
+            </li>
+
+            <!-- <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li> 
+        </ul>
+    </div> -->

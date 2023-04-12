@@ -1,0 +1,27 @@
+<li
+  [class.left]="position === 'left'"
+  [class.right]="position === 'right'"
+  class="clearfix"
+>
+  <!-- <span
+    [class.float-left]="position === 'left'"
+    [class.float-right]="position === 'right'"
+    class="chat-img"
+  >
+    <img [src]="message?.user?.imageUrl" alt="User Avatar" class="img-circle" />
+  </span> -->
+  <div class="chat-body clearfix">
+    <div class="header chatboard">
+      <!-- <strong class="primary-font">{{ message?.user?.name }}</strong> -->
+      <div [ngClass]="message.user.id == 1 ? 'sent' : 'received'">
+        <p style="margin: 0">{{ message?.text }}</p>
+      </div>
+    </div>
+    <small
+      [class.float-left]="position === 'left'"
+      [class.float-right]="position === 'right'"
+      class="text-muted mt-2"
+      >{{ message?.date | date : "shortTime" }}</small
+    >
+  </div>
+</li>

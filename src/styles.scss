@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*@import "~@ng-select/ng-select/themes/default.theme.css";  */
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+/* @import "~font-awesome/css/font-awesome.css";  */
+
+// @import "assets/dist/styles/app.min.css";
+@import "~@ctrl/ngx-emoji-mart/picker";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// body{
+//   background-color: #001233;
+//   font-family: 'Inter', sans-serif;
+// }
+* {
+  margin: 0;
+  padding: 0;
+}
+.mat-typography {
+  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  background: lightgrey;
+  height: 100%;
+}
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  width: auto;
+  height: auto;
+  background: none;
+  margin: initial;
+  border-radius: 0;
+  background: none !important;
+}
+
+.owl-dots .owl-dot.active {
+  background-color: none !important;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #2461ff !important;
+}
+
+.shub-bg-top .owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 16px;
+}
+
+.shub-bg-top .owl-theme .owl-dots .owl-dot span {
+  width: 4px;
+  height: 4px;
+  background: #000000 !important; /* dots color */
+}
+
+.shub-bg-top .owl-theme .owl-dots .owl-dot.active span,
+.shub-bg-top .owl-theme .owl-dots .owl-dot:hover span {
+  background: #ffffff !important; /*active and on hover color*/
+}
+
+/**body .body-wrapper{
+  max-width:100%;
+}
+header{
+  max-width:100%;
+}
+.bottom-feed{
+  max-width: 100%;
+}**/
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
